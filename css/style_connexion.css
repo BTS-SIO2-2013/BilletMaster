@@ -46,7 +46,7 @@ nav a.focus {
 form {
 	width: 280px;
 	height: 260px;
-	margin: 200px auto 0 auto;				/* Marge du formulaire de connexion */
+	margin: 150px auto 0 auto;				/* Marge du formulaire de connexion */
 	background: white;
 	border-radius: 3px;
 	box-shadow: 0 0 10px rgba(0,0,0, .4); 
@@ -109,4 +109,28 @@ form .button:active {
 	background: -ms-linear-gradient(bottom, #5b9ee9 0%, #4884c2 100%);
 	
 	box-shadow: inset 0 0 2px rgba(0,0,0, .3), 0 1px 0 white;
+}
+
+/* Mot de passe oublié (accueil) */
+.mdpPerdu {
+	font-size: 11px;
+	margin-top: 10px;
+}
+
+/* Erreur connexion */
+#formEtErreur {
+	height: 330px;
+}
+.erreurConnexion {
+	width: 280px;
+	height: 50px;
+	margin: 150px auto -130px auto;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: white;
+	background-color: rgba(194,0,0,.6);
+	border-radius: 3px;
+	box-shadow: 0 0 10px rgba(0,0,0, .4); 
+	text-align: center;
+	padding-top: 1px;
 }
