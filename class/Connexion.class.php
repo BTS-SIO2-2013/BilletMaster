@@ -10,17 +10,11 @@
 		    require_once 'includes/sqlConnect.php';
 
 	        try {
-	        	// Comparaison du login et du mot de passe avec ceux de la BDD
+	        	// Comparaison du login et du mot de passe crypté en SHA256 avec ceux de la BDD
 			    $requete = "SELECT * 
 							FROM personne
 							WHERE login = '" . $login . "'
-							AND motDePasse = '" . $motDePasse . "'";
-				// $login = $bdd->prepare($requete, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
-				// $pass = hash('md5',$motDePasse,TRUE);
-				// $arr = array(':login' => $_POST['login'], ':motDePasse' => $pass);
-				// $login->execute($arr);
-				// $member = $login->fetchAll();
-				// print_r($member);
+							AND motDePasse = '".hash('sha256',$motDePasse)."'";
 		        $resultat = $bdd->query($requete) or die("Erreur avec la requete: $requete");
 		        if ($resultat->rowCount() != 1)
 				{
@@ -32,7 +26,7 @@
 						$id = $ligne->id;
 						$nom = $ligne->nom;
 						$prenom = $ligne->prenom;
-						$adresseMail = $ligne->mail;
+						$adresseMail = $ligne->adresseMail;
 						$telephone = $ligne->telephone;
 						$login = $ligne->login;
 			            $motDePasse = $ligne->motDePasse;
