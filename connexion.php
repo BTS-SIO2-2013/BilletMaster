@@ -20,7 +20,7 @@
 			<input type="text" name="txtLogin" class="text-field" placeholder="Identifiant" />
 			<input type="password" name="txtPass" class="text-field" placeholder="Mot de passe" />
 			<input type="submit" value="Connexion" class="button" /><br />
-			<div class="mdpPerdu"><a href="#">Mot de passe perdu ?</a></div>
+			<div class="mdpPerdu"><a href="oublieMdp.php">Mot de passe perdu ?</a></div>
 		</form>
 	</div>
 	

@@ -54,16 +54,23 @@ form {
 	padding-top: 1px;
 }
 
-form .text-field {
+form .text-field, .text-field2 {
 	border: 1px solid #a6a6a6;
 	width: 230px;
 	height: 40px;
 	border-radius: 3px;
-	margin-top: 10px;
 	padding-left: 10px;
 	color: #6c6c6c;
 	background: #fcfcfc;
 	outline: none;
+}
+
+form .text-field {
+	margin-top: 10px;
+}
+
+form .text-field2 {
+	margin-top: 40px;
 }
 
 form .text-field:focus {
@@ -121,7 +128,7 @@ form .button:active {
 #formEtErreur {
 	height: 330px;
 }
-.erreurConnexion {
+.erreurConnexion, .erreurAdresseMail {
 	width: 280px;
 	height: 50px;
 	margin: 150px auto -130px auto;
@@ -132,5 +139,6 @@ form .button:active {
 	border-radius: 3px;
 	box-shadow: 0 0 10px rgba(0,0,0, .4); 
 	text-align: center;
+	font-size: 13px;
 	padding-top: 1px;
 }
