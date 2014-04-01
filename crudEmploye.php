@@ -1,3 +1,9 @@
+<?php
+	require_once('class/Personne.class.php');
+	//	Pas d'accès direct
+    require_once('includes/confirmConnexion.php');
+ ?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html>
@@ -112,6 +118,14 @@
 						<div id="btnCreer">
 							<input type="submit" value="Enregistrer" id="btnCU" />
 						</div>
+					</form>
+					
+					<form>
+						<?php
+							$listePersonne = Personne::getListePersonnes();
+							$tab = Personne::affichagePersonne($listePersonne);
+							print($tab);
+						?>
 					</form>
 					<div id="basCorps">
 						<div id="btnRetour">
