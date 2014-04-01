@@ -112,12 +112,15 @@
 						<input type="submit" value="Enregistrer" id="btnCU" />
 					</div>
 				</form>
-				<form>
+				<form action="includes/dEmploye.php" method="post" id="formD">
 					<?php
 						$listePersonne = Personne::getListePersonnes();
 						$tab = Personne::affichagePersonne($listePersonne);
 						print($tab);
 					?>
+					<div id="btnSupprimer">
+						<input type="submit" value="Supprimer" id="btnD" />
+					</div>
 				</form>
 				<div id="basCorps">
 					<div id="btnRetour">
