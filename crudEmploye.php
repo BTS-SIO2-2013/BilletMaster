@@ -120,12 +120,16 @@
 						</div>
 					</form>
 					
-					<form>
+					<form action="includes/dEmploye.php" method="post" id="formdEmploye">
+						
 						<?php
 							$listePersonne = Personne::getListePersonnes();
 							$tab = Personne::affichagePersonne($listePersonne);
 							print($tab);
 						?>
+						<div id="idEmploye">
+							<input type="submit" value="supprimer" id="supprPersonne" />
+						</div>
 					</form>
 					<div id="basCorps">
 						<div id="btnRetour">
