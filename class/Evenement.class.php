@@ -83,6 +83,17 @@
 			return($tab);
 		}
 
+		public static function affichageComboBox($listeDesEvenements)
+		{	
+			$combo = ("<h5>Choisissez un Evenement</h5><select name=Statevent id=lstEvent class=filter><option value=null>Choix evenement</option>");
+			foreach($listeDesEvenements as $unEvent){
+				$combo =$combo.("<option value='".$unEvent->id."'>".$unEvent->libelle."</option>");
+			}
+			$combo = $combo.("</select>");
+
+			return($combo);
+		}
+
 		public static function getSalleEvenement($idEvenement)
 		{
 			include './includes/sqlConnect.php';

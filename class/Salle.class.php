@@ -69,7 +69,7 @@
 		}
 
 		public static function affichageComboBox($listeDeSalles)
-		{	
+		{
 			$combo = ("<h5>Choisissez une salle</h5><select name=salle class=filter id=lstSalle>");
 			$combo =$combo.("<option selected='selected' value='Choisir une salle'>Choisir une salle</option>");
 			foreach($listeDeSalles as $uneSalle){
