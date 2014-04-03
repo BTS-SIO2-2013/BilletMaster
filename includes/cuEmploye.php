@@ -57,7 +57,19 @@
     		echo $e;
     	}
 	}
-	
+	if ($id != ""){
+		echo $id;
+		try {
+		$chargePersonne = $bdd -> prepare('SELECT nom, prenom adresseMail, telephone, login, motDePasse, admin from personne, employe WHERE personne.id = employe.idEmploye and id = :id');
+		$chargePersonne =-> execute( array(
+				<tr><td>Pseudo:</td><td><input type='text' name='nom' value='$nom'/></td>
+				));
+			}catch (Exception $e){
+				echo $e;
+			}
+	}
+
+
 	// Redirection
 	header('Location: ../crudEmploye.php');
 
