@@ -18,7 +18,16 @@
 	        {
 	            case 0: // action du constructeur à 0 paramètre
 	                break;
-				case 8 : //action du constructeur à 12 paramètres
+	            case 7 : //action du constructeur à 7 paramètres
+	                $this->id = func_get_arg(0);
+	                $this->nom = func_get_arg(1);
+	                $this->prenom = func_get_arg(2);
+	                $this->adresseMail = func_get_arg(3);
+	                $this->telephone = func_get_arg(4);
+	                $this->login = func_get_arg(5);
+	                $this->motDePasse = func_get_arg(6);
+	                break;
+				case 8 : //action du constructeur à 8 paramètres
 	                $this->id = func_get_arg(0);
 	                $this->nom = func_get_arg(1);
 	                $this->prenom = func_get_arg(2);
