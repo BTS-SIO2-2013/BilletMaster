@@ -3,8 +3,8 @@
 	class Personne
 	{
 	    private $id;
-	    private $nom;
-	    private $prenom;
+	    public $nom;
+	    public $prenom;
 	    private $adresseMail;
 	    private $telephone;
 	    private $login;
