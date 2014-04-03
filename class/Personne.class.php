@@ -80,7 +80,7 @@
 			$tab = ("<table border><th></th><th>Nom</th><th>Prenom</th><th>Adresse mail</th><th>Admin</th>");
 			foreach($listeDePersonnes as $unePersonne){
 					$tab =$tab.("<tr>");
-					$tab =$tab.("<td><INPUT type='checkbox' value='".$unePersonne->id."'></td>");
+					$tab =$tab.("<td><INPUT name = 'idEmploye[]' type='checkbox' value='".$unePersonne->id."'></td>");
 					$tab =$tab.("<td>".$unePersonne->nom."</td>");
 					$tab =$tab.("<td>".$unePersonne->prenom."</td>");
 					$tab =$tab.("<td>".$unePersonne->adresseMail."</td>");
