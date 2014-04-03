@@ -40,7 +40,7 @@
 			include './includes/sqlConnect.php';
 
         	try {
-		    	$recuperationSalle = $bdd->prepare('SELECT id, libelle FROM salle');
+		    	$recuperationSalle = $bdd->prepare('SELECT id, libelle FROM salle Order by libelle ASC');
 		    	$recuperationSalle->execute();
 
 	        	$listeSalle = array();
@@ -66,6 +66,17 @@
 			$tab = $tab.("</table>");
 
 			return($tab);
+		}
+
+		public static function affichageComboBox($listeDeSalles)
+		{	
+			$combo = ("<h5>Choisissez une salle</h5><select class=filter id=lstSalle><option value=null>Choix de la Salle</option>");
+			foreach($listeDeSalles as $uneSalle){
+					$combo =$combo.("<option value='".$uneSalle->id."'>".$uneSalle->libelle."</option>");
+			}
+			$combo = $combo.("</select>");
+
+			return($combo);
 		}
 	}
 ?>
