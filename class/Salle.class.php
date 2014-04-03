@@ -3,7 +3,8 @@
 	class Salle
 	{
 	    private $id;
-	    private $libelle;
+	    public $libelle;
+		public $listeDesEvenements;
 
 		public function __construct()
 		{	

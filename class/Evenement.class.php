@@ -3,11 +3,11 @@
 	class Evenement
 	{
 	    private $id;
-	    private $dateDebutVente;
+	    public $dateDebutVente;
 	    private $dateFinVente;
 	    private $dateDebutEvenement;
 	    private $dateFinEvenement;
-	    private $libelle;
+	    public $libelle;
 	    private $idEmploye;
 	    private $idSalle;
 
