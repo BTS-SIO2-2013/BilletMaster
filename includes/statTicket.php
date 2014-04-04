@@ -31,13 +31,16 @@
 
 			$resNonValid = $resTotal['nb']-$resValid['nb'];
 
-			echo("<h2>Evenement : ".$libelle['libelle']."</h2>");
-			echo("<h3>Nombre de ticket total  : ".$resTotal['nb']."</h3>");
-			echo("<h3>Nombre de ticket valide : ".$resValid['nb']."</h3>");
-			echo("<h3>Nombre de ticket non valide : ".$resNonValid."</h3>");
+			if($resTotal['nb']==0){
+				echo("<p class='erreurDonnees'>Pas d'informations'disponibles pour l'evenement : ".$libelle['libelle']."</p>");
+			} else {
+				echo("<h2>Evenement : ".$libelle['libelle']."</h2>");
+				echo("<h3>Nombre de ticket total  : ".$resTotal['nb']."</h3>");
+				echo("<h3>Nombre de ticket valide : ".$resValid['nb']."</h3>");
+				echo("<h3>Nombre de ticket non valide : ".$resNonValid."</h3>");
 
-			echo("<img src='includes/jpgraph.php?resNon=".$resNonValid."&res=".$resValid['nb']."'></img>");
-
+				echo("<img src='includes/jpgraph.php?resNon=".$resNonValid."&res=".$resValid['nb']."'></img>");
+			}
     	} catch (Exception $e) {
     		echo $e;
     	}
