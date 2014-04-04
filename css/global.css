@@ -45,7 +45,7 @@
 	margin-right: 10%;
 	margin-top: 5%;
 	float: right;
-	background-color: #268AA4;
+	background-color: #4884c2;
 	padding: 10px;
 	border-radius: 3px;
 	box-shadow: 0 0 10px rgba(0,0,0, .4); 
@@ -155,7 +155,7 @@ Bloc Stat Ajax
 
 #statsAjax {
 	width: 40%;
-	background-color: #268AA4;
+	background-color: #4884c2;
 	margin-left: 20%;
 	margin-top: 10%;
 	float: left;
@@ -181,4 +181,9 @@ Fond
 body {
 	background-image: url(../img/bg.png);
 	background-repeat:repeat;
+}
+
+.erreurDonnees{
+	color: red;
+	text-align: center;
 }
