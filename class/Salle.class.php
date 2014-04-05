@@ -1,4 +1,6 @@
 <?php
+	//	Evenement
+	require_once('Evenement.class.php');
 	
 	class Salle
 	{
@@ -79,6 +81,51 @@
 			$combo = $combo.("</select>");
 
 			return($combo);
+		}
+
+		public static function affichageComboBoxSelected($listeDeSalles, $idEvenement)
+		{
+			$combo = ("<h5>Salle</h5><select name=lstSalle class=filter id=lstSalle>");
+			foreach($listeDeSalles as $uneSalle){
+				if ($uneSalle->id == Salle::getIDSalleEvenement($idEvenement)) {
+					$combo = $combo.("<option value='".$uneSalle->id."' selected='".Salle::getSalleEvenement($idEvenement)."'>".$uneSalle->libelle."</option>");
+				} else {
+					$combo = $combo.("<option value='".$uneSalle->id."'>".$uneSalle->libelle."</option>"); 
+				}
+			}
+			$combo = $combo.("</select>");
+
+			return($combo);
+		}
+
+		public static function getSalleEvenement($idEvenement)
+		{
+			include './includes/sqlConnect.php';
+
+        	try {
+        		$req = "SELECT s.libelle FROM salle as s, evenement as evt WHERE s.id = evt.idSalle AND evt.id = '$idEvenement'";
+		    	$recuperationSalleEvenement = $bdd->prepare($req);
+		    	$recuperationSalleEvenement->execute();
+		    	$salleEvenement = $recuperationSalleEvenement->fetch();
+				return $salleEvenement["libelle"];
+        	} catch (Exception $e) {
+        		echo "Erreur de connexion !";
+        	}
+		}
+
+		public static function getIDSalleEvenement($idEvenement) 
+		{
+			include './includes/sqlConnect.php';
+
+        	try {
+        		$req = "SELECT s.id FROM salle as s, evenement as evt WHERE s.id = evt.idSalle AND evt.id = '$idEvenement'";
+		    	$recuperationSalleEvenement = $bdd->prepare($req);
+		    	$recuperationSalleEvenement->execute();
+		    	$salleEvenement = $recuperationSalleEvenement->fetch();
+				return $salleEvenement["id"];
+        	} catch (Exception $e) {
+        		echo "Erreur de connexion !";
+        	}
 		}
 	}
 ?>
