@@ -84,6 +84,30 @@
         	}			
 		}
 
+		public static function getListeEvenementsTickets()
+		{
+			//	Connexion
+		    include BASE_URI.'/includes/sqlConnect.php';
+
+	        try {
+	        	
+			    $requete = 'SELECT * 
+							FROM evenement';
+
+		        $resultat = $bdd->query($requete) or die("Erreur avec la requete: $requete");
+
+		        $listeEvenements = array();
+	        	while ($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) {
+	        		$unEvenement = new Evenement($ligne['id'], $ligne['dateDebutVente'], $ligne['dateFinVente'], $ligne['dateDebutEvenement'], $ligne['dateFinEvenement'], $ligne['libelle'], $ligne['idEmploye'], $ligne['idSalle']);
+					$listeEvenements[] = $unEvenement; //insertion d un evenement dans le tableau
+				}
+				return $listeEvenements;
+	        	
+	        } catch (Exception $e) {
+	        	echo "Erreur de connexion !";
+	        }
+		}
+
 		public static function affichageEvenements($listeDesEvenements)
 		{	
 			$tab = ("<table border><th></th><th>Libelle</th><th>Date debut</th><th>Date fin</th><th>Salle</th><th>Modifier</th>");
