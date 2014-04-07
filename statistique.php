@@ -83,6 +83,7 @@
 					var idp = $('#lstEvent option:selected').val();
 					var idpSalle = $('#lstSalle option:selected').val();
 					var idpPeriode = $('#lstPeriode option:selected').val();
+
 					$('#statsAjax').show();
 					if((idp == 'null')||(idpPeriode=='null' && idpSalle=='null')||(idpPeriode=='null' && idpSalle=='null' && idp == 'null')){
 						$('#statsAjax').html(" !! Attention aucun Filtre selectionne !!").css("color", "red").css("text-align", "center");	
