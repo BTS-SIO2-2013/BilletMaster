@@ -6,17 +6,15 @@
 	//  On récupère l'identifiant de l'évènement
     $idEvent = isset($_POST['idp']) ? $_POST['idp'] : false;
 
-    //echo("L'id de l'evenement selectionne ".$idEvent."</br>");
-
     if($idEvent!=null){
     	try {
     		$nbTicketValidés = $bdd->prepare("SELECT count(t.id) as nb FROM ticket as t, evenement as e WHERE t.idEvenement=e.id AND t.etat = '1' AND e.id=:idEvenement");
-			$nbTicketValidés->execute(array( // Update dans la table salle
+			$nbTicketValidés->execute(array(
 				'idEvenement' => $idEvent
 			));
 
 			$nbTicketTotal = $bdd->prepare("SELECT count(t.id) as nb FROM ticket as t, evenement as e WHERE t.idEvenement=e.id AND e.id=:idEvenement");
-			$nbTicketTotal->execute(array( // Update dans la table salle
+			$nbTicketTotal->execute(array( 
 				'idEvenement' => $idEvent
 			));
 
