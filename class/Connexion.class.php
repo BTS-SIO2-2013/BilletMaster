@@ -1,13 +1,14 @@
 <?php
 
-    require_once("Personne.class.php");
+    require_once 'Personne.class.php';
+
 	
     class Connexion
     {	
 		public function GetPersonneByLogin($login, $motDePasse)
 		{
 			//	Connexion
-		    require_once 'includes/sqlConnect.php';
+		    require_once '../../includes/sqlConnect.php';
 
 	        try {
 	        	// Comparaison du login et du mot de passe crypté en SHA256 avec ceux de la BDD

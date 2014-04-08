@@ -1,14 +1,6 @@
-<?php
-	//	Pas d'accès direct
-    require_once('includes/confirmConnexion.php');
-    //	Fichier config
-    require_once('includes/config.inc.php');
-    //	Fichier entête
-	include('header.php');
+<?php 
+	//	Fichier de configuration des liens
+	//require_once 'config.inc.php';
+	//	Fichier accueil
+	include 'accueil.php';
 ?>
-ACCUEIL !!!!!!
-<a href="crudEmploye.php">Liste Employes</a>
-<a href="crudSalle.php">Liste des Salles</a></br>
-<a href="statistique.php">Statistiques</a>
-<a href="crudEvenement.php">Liste des Evenements</a>
-<?php include 'footer.php'; ?>

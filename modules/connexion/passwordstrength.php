@@ -4,7 +4,7 @@
 </head>
 <body>
 
-<form action="includes/cuEmploye.php" method="post" id="formCU">
+<form action="../employe/cuEmploye.php" method="post" id="formCU">
 		
 		<p>	
 			<label for="pass">Password</label><input type="password" name="pass" id="pass" onkeyup="passwordStrength(this.value)"/>
@@ -82,19 +82,19 @@ function passwordStrength(password)
 
 	var score   = 0;
 
-	//if password bigger than 6 give 1 point
+	// Si taille plus grand que 6 -> +1
 	if (password.length > 7) score++;
 
-	//if password has both lower and uppercase characters give 1 point	
+	// Si comporte au moins 1 caractère minuscule et 1 majuscule -> +1
 	if ( ( password.match(/[a-z]/) ) && ( password.match(/[A-Z]/) ) ) score++;
 
-	//if password has at least one number give 1 point
+	// Si comporte au moins 1 chiffre -> +1
 	if (password.match(/\d+/)) score++;
 
-	//if password has at least one special caracther give 1 point
+	// Si comporte au moins 1 caractère spécial -> +1
 	if ( password.match(/.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/) )	score++;
 
-	//if password bigger than 12 give another 1 point
+	// Si taille plus grand que 12 -> +1
 	if (password.length > 12) score++;
 
 	 document.getElementById("passwordDescription").innerHTML = desc[score];

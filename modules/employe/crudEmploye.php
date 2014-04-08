@@ -1,7 +1,7 @@
 <?php
-	require_once('class/Personne.class.php');
+	require_once '../../class/Personne.class.php';
 	//	Pas d'accès direct
-    require_once('includes/confirmConnexion.php');
+    require_once '../connexion/confirmConnexion.php';
  ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -10,10 +10,10 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 		<title>Création d'un employe</title>
-		<link rel="stylesheet" type="text/css" href="css/global.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/global.css" />
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 		<script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
-		<script type="text/javascript" src="js/verifsForm.js"></script>
+		<script type="text/javascript" src="../../js/verifsForm.js"></script>
 		<script type="text/javascript">
 		$(function(){
 			$("#btnCU").click(function() {
@@ -76,7 +76,7 @@
                 <div id="hautCorps">
                 </div>
 				<div id="milieuCorps">
-					<form action="includes/cuEmploye.php" method="post" id="formCU">
+					<form action="cuEmploye.php" method="post" id="formCU">
 						<div id="idPersonne">
 							<input type="text" name="idPersonne" value="" id="idInput" hidden="true"/>
 						</div>
@@ -122,7 +122,7 @@
 						</div>
 					</form>
 					
-					<form action="includes/dEmploye.php" method="post" id="formdEmploye">
+					<form action="dEmploye.php" method="post" id="formdEmploye">
 						
 						<?php
 							$listePersonne = Personne::getListePersonnes();
@@ -139,7 +139,7 @@
 					</form>
 					<div id="basCorps">
 						<div id="btnRetour">
-	                        <a href="index.php">Retour</a>
+	                        <a href="../../index.php">Retour</a>
 	                    </div>
 	                </div>
 	            </div>

@@ -1,13 +1,15 @@
 <?php
+	//	Salle
+	require_once 'Salle.class.php';
 	
 	class Evenement
 	{
 	    private $id;
-	    private $dateDebutVente;
+	    public $dateDebutVente;
 	    private $dateFinVente;
 	    private $dateDebutEvenement;
 	    private $dateFinEvenement;
-	    private $libelle;
+	    public $libelle;
 	    private $idEmploye;
 	    private $idSalle;
 
@@ -49,7 +51,7 @@
 
 		public static function getListeEvenements()
 		{
-			include './includes/sqlConnect.php';
+			include '../../includes/sqlConnect.php';
 
         	try {
 		    	$recuperationEvenement = $bdd->prepare('SELECT evt.id, evt.dateDebutVente, evt.dateFinVente, evt.dateDebutEvenement, evt.dateFinEvenement, evt.libelle, evt.idEmploye, evt.idSalle FROM evenement as evt, employe as e, personne as p, salle as s WHERE p.id = e.idEmploye AND e.idEmploye = evt.idEmploye AND s.id = evt.idSalle');
@@ -66,16 +68,57 @@
         	}
 		}
 
+		public static function getInfosEvenement($idEvenement)
+		{
+			include '../../includes/sqlConnect.php';
+
+			try {
+		    	$recuperationInfosEvenement = $bdd->prepare("SELECT * FROM evenement WHERE id = '".$idEvenement."'");
+		    	$recuperationInfosEvenement->execute();
+
+        		$res = $recuperationInfosEvenement->fetch();
+    			$lEvenement = new Evenement($res['id'], $res['dateDebutVente'], $res['dateFinVente'], $res['dateDebutEvenement'],  $res['dateFinEvenement'],  $res['libelle'],  $res['idEmploye'], $res['idSalle']);
+				return $lEvenement;
+        	} catch (Exception $e) {
+        		echo "Erreur de connexion !";
+        	}			
+		}
+
+		public static function getListeEvenementsTickets()
+		{
+			//	Connexion
+		    include '../../includes/sqlConnect.php';
+
+	        try {
+	        	
+			    $requete = 'SELECT * 
+							FROM evenement';
+
+		        $resultat = $bdd->query($requete) or die("Erreur avec la requete: $requete");
+
+		        $listeEvenements = array();
+	        	while ($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) {
+	        		$unEvenement = new Evenement($ligne['id'], $ligne['dateDebutVente'], $ligne['dateFinVente'], $ligne['dateDebutEvenement'], $ligne['dateFinEvenement'], $ligne['libelle'], $ligne['idEmploye'], $ligne['idSalle']);
+					$listeEvenements[] = $unEvenement; //insertion d un evenement dans le tableau
+				}
+				return $listeEvenements;
+	        	
+	        } catch (Exception $e) {
+	        	echo "Erreur de connexion !";
+	        }
+		}
+
 		public static function affichageEvenements($listeDesEvenements)
 		{	
-			$tab = ("<table border><th></th><th>Libelle</th><th>Date debut</th><th>Date fin</th><th>Salle</th>");
+			$tab = ("<table border><th></th><th>Libelle</th><th>Date debut</th><th>Date fin</th><th>Salle</th><th>Modifier</th>");
 			foreach($listeDesEvenements as $unEvenement){
 					$tab =$tab.("<tr>");
 					$tab =$tab.("<td><INPUT type='checkbox' name='id[]' value='".$unEvenement->id."'></td>");
 					$tab =$tab.("<td>".$unEvenement->libelle."</td>");
 					$tab =$tab.("<td>".$unEvenement->dateDebutEvenement."</td>");
 					$tab =$tab.("<td>".$unEvenement->dateFinEvenement."</td>");
-					$tab =$tab.("<td>".Evenement::getSalleEvenement($unEvenement->id)."</td>");
+					$tab =$tab.("<td>".Salle::getSalleEvenement($unEvenement->id)."</td>");
+					$tab =$tab.("<td><input type='button' name=".$unEvenement->id." data-role='evenementModif' onclick='javascript:modifEvenement();' value='Modifier' /></td>");
 					$tab =$tab.("</tr>");
 			}
 			$tab = $tab.("</table>");
@@ -92,21 +135,6 @@
 			$combo = $combo.("</select>");
 
 			return($combo);
-		}
-
-		public static function getSalleEvenement($idEvenement)
-		{
-			include './includes/sqlConnect.php';
-
-        	try {
-        		$req = "SELECT s.libelle FROM salle as s, evenement as evt WHERE s.id = evt.idSalle AND evt.id = '$idEvenement'";
-		    	$recuperationSalleEvenement = $bdd->prepare($req);
-		    	$recuperationSalleEvenement->execute();
-		    	$salleEvenement = $recuperationSalleEvenement->fetch();
-				return $salleEvenement["libelle"];
-        	} catch (Exception $e) {
-        		echo "Erreur de connexion !";
-        	}
 		}
 	}
 ?>

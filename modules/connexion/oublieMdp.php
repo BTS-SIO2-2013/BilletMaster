@@ -1,9 +1,9 @@
 <?php
 
 	session_start();
-    require_once '../class/Connexion.class.php';
+    require '../../class/Connexion.class.php';
     //	Connexion
-	require_once('sqlConnect.php');
+	require '../../includes/sqlConnect.php';
 	
     // ---------------------------------------------------------------------
     //  Générer un mot de passe aléatoire
@@ -46,7 +46,7 @@
 
     if (empty($_POST["adresseMail"])){
     	$_SESSION['erreurMail'] = "Vous devez renseigner une adresse mail.";
-    	header ("Location: ../oublieMdp.php");
+    	header ("Location: oublieMdp.php");
     }else{
      	$mail = $_POST["adresseMail"];
      	try {
@@ -55,7 +55,7 @@
 			$exist = $bdd->query($selectMail);
 			if($exist->rowCount() != 1){
 				$_SESSION['erreurMail']="Mail inexistant.";
-				header ("Location: ../oublieMdp.php");
+				header ("Location: oublieMdp.php");
 			} else { 
                 $newMdp = genererMDP();
                 echo("Votre nouveau mot de passe est '$newMdp'");
