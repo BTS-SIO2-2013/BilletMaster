@@ -65,10 +65,6 @@
 	            <div id="titre">
 	                <h1>Liste des employes</h1>
 	            </div>
-	            <div id="profil">
-	                <button type="button">Profil</button>
-	                <button type="button">Deconnexion</button>
-	            </div>
 				<div id="filAriane">
                 </div>
             </div>
@@ -131,10 +127,6 @@
 						?>
 						<div id="idEmploye">
 							<input type="submit" value="supprimer" id="supprPersonne" />
-						</div>
-					</form>
-					<form action="includes/cuEmploye.php" method="post" id="formcuEmploye">
-						<div id= "idPersonne">
 						</div>
 					</form>
 					<div id="basCorps">
