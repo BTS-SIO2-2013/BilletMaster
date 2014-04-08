@@ -58,7 +58,7 @@
 
 		public static function getListePersonnes()
 		{
-			include './includes/sqlConnect.php';
+			include '../../includes/sqlConnect.php';
 
         	try {
 		    	$recuperationPersonne = $bdd->prepare('SELECT personne.id, personne.nom, personne.prenom, personne.adresseMail, personne.telephone, personne.login, personne.motDePasse, employe.admin FROM personne, employe WHERE employe.idEmploye = personne.id');

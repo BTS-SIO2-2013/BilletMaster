@@ -40,7 +40,7 @@
 
 		public static function getListeSalles()
 		{
-			include './includes/sqlConnect.php';
+			include '../../includes/sqlConnect.php';
 
         	try {
 		    	$recuperationSalle = $bdd->prepare('SELECT id, libelle FROM salle Order by libelle ASC');
@@ -74,7 +74,7 @@
 		public static function affichageComboBox($listeDeSalles)
 		{
 			$combo = ("<h5>Choisissez une salle</h5><select name=salle class=filter id=lstSalle>");
-			$combo =$combo.("<option selected='selected' value='Choisir une salle'>Choisir une salle</option>");
+			$combo =$combo.("<option selected='selected' value='null'>Choisir une salle</option>");
 			foreach($listeDeSalles as $uneSalle){
 					$combo =$combo.("<option value='".$uneSalle->id."'>".$uneSalle->libelle."</option>");
 			}
@@ -100,7 +100,7 @@
 
 		public static function getSalleEvenement($idEvenement)
 		{
-			include './includes/sqlConnect.php';
+			include '../../includes/sqlConnect.php';
 
         	try {
         		$req = "SELECT s.libelle FROM salle as s, evenement as evt WHERE s.id = evt.idSalle AND evt.id = '$idEvenement'";
@@ -115,7 +115,7 @@
 
 		public static function getIDSalleEvenement($idEvenement) 
 		{
-			include './includes/sqlConnect.php';
+			include '../../includes/sqlConnect.php';
 
         	try {
         		$req = "SELECT s.id FROM salle as s, evenement as evt WHERE s.id = evt.idSalle AND evt.id = '$idEvenement'";

@@ -1,8 +1,8 @@
 <?php
 
-	require_once ('../jpgraph/src/jpgraph.php');
-	require_once ('../jpgraph/src/jpgraph_pie.php');
-	require_once ('../jpgraph/src/jpgraph_pie3d.php');
+	require_once '../modules/jpgraph/src/jpgraph.php';
+	require_once '../modules/jpgraph/src/jpgraph_pie.php';
+	require_once '../modules/jpgraph/src/jpgraph_pie3d.php';
 	
 	// Réecuperation valeur
 	$resNonValid = $_GET["resNon"];

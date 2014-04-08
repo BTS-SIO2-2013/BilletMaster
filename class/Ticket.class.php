@@ -51,7 +51,7 @@ class Ticket
 	public static function getListeTickets($evenement)
 	{
 		//	Connexion
-	    include BASE_URI.'/includes/sqlConnect.php';
+	    include '../../includes/sqlConnect.php';
         try {
         	
 		    $requete = 'SELECT * 
@@ -76,7 +76,7 @@ class Ticket
 	public static function getUnTicket($idTicket)
 	{
 		//	Connexion
-	    include BASE_URI.'/includes/sqlConnect.php';
+	    include '../../includes/sqlConnect.php';
 
         try {
         	
