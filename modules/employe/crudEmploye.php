@@ -97,8 +97,12 @@
 						<div class="message-erreur"></div>
 						<div id="mdp">
 							<h6>Mot de passe</h6>
-							<input type="password" name="mdp" value="" id="mdpInput">
+							<input type="password" name="mdp" value="" id="mdpInput" onkeyup="passwordStrength(this.value)">
 						</div>
+						<p>
+							<div id="passwordDescription">Aucun mot de passe</div>
+							<div id="passwordStrength" class="strength0"></div>
+						</p>
 						<div class="message-erreur"></div>
 						<div id="mail">
 							<h6>Mail</h6>
