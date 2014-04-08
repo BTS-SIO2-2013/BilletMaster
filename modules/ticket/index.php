@@ -3,9 +3,13 @@
 	include '../../header.php'; //	Fichier entête
 	include '../../class/Ticket.class.php';
 	include '../../class/Evenement.class.php';
+
 ?>
-
-
+<link rel="stylesheet" type="text/css" href="../../css/styleConnexion.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/styleListeTicket.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/jquery.datetimepicker.css" />
+<script src="../../js/jquery-2.1.0.min.js"></script>
+<script src="../../js/jquery.datetimepicker.js"></script>
 <h1>Gestionnaire des tickets</h1>
 
 
@@ -35,7 +39,6 @@
 	
 </div>
 <script>
-
 $(document).ready(function(){
 	$('.dateTime').datetimepicker({
 		lang:'fr'

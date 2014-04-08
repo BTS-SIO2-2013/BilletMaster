@@ -4,13 +4,8 @@
 	//	Pas d'accès direct
     require_once '../connexion/confirmConnexion.php';
 ?>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 		<title>Gestionnaire des evenements</title>
+		<link rel="stylesheet" type="text/css" href="../../css/global.css" />
 		<link rel="stylesheet" type="text/css" href="../../css/jquery.datetimepicker.css" />
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 		<script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
@@ -60,8 +55,7 @@
 			});
 		});
 		</script>-->
-	</head>
-	<body>
+
 		<div id="bg">
 			<div id="hautPage">
 	            <div id="titre">
@@ -156,6 +150,3 @@
 
 			});
 		</script>
-
-	</body>
-</html>

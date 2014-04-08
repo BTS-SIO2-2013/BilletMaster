@@ -8,7 +8,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="css/stylConnexion.css" />
+		<link rel="stylesheet" type="text/css" href="css/styleConnexion.css" />
 		<link rel="stylesheet" type="text/css" href="css/styleListeTicket.css" />
 		<link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css" />
 		<title><?php if(empty($title)){ echo 'Administration TicketMaster'; } else{ echo $title.' - Administration TicketMaster'; } ?></title>

@@ -4,6 +4,7 @@
 	//	Connexion
 	require_once '../../includes/sqlConnect.php';
 
+
     // Recuperation des donnees du formulaire
     $id= $_POST['idEmploye'];
 
@@ -23,6 +24,6 @@
     }
     
     // Redirection
-    header('Location: ../crudEmploye.php');
+    header('Location: ../employe/crudEmploye.php');
    
 ?>
