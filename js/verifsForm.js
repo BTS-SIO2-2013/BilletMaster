@@ -34,25 +34,7 @@ function passwordStrength(password)
 
 
 $(function(){
-
-	// $( "input[name='telephone']" ).blur(function() {
-	// 	var mdp = $('#telInput').val();
-	// 	if (mdp.match(/^0[1-9][0-9]{8}$/)) {
-	// 		$('#telInput').css("border-color","#FF0000");
-	// 		$('#telephone').next(".message-erreur").fadeIn().text("Téléphone non valide");
-	// 		valid = false;
-	// 	}
-	// 	else {
-	// 		$(this).css("border-color","#000000");
-	//     	$(this).parent().next('.message-erreur').fadeOut();
-	//     	valid = true;
-	// 	}
-	// });
-
-
-
-
-
+	
 	$("#btnCU").click(function() {
 		valid = true;
 		var nom = $('#nomInput').val();
