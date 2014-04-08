@@ -23,7 +23,7 @@
     	try {
     		// TODO : fichier comprenant toutes les requetes stockees
     		$insertIntoSalle = $bdd->prepare('INSERT INTO salle(libelle) VALUES(:libelle)');
-			$insertIntoSalle->execute(array( // Insert dans la table personne
+			$insertIntoSalle->execute(array( // Insert dans la table salle
 				'libelle' => $libelle,
 			));
     	} catch (Exception $e) {

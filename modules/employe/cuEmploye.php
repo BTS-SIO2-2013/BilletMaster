@@ -57,7 +57,9 @@
     		echo $e;
     	}
 	}
-	if ($id != ""){
+	
+	// Qu'est ce que c'est ca benoit ??
+/*	if ($id != ""){
 		echo $id;
 		try {
 		$chargePersonne = $bdd -> prepare('SELECT nom, prenom adresseMail, telephone, login, motDePasse, admin from personne, employe WHERE personne.id = employe.idEmploye and id = :id');
@@ -67,7 +69,7 @@
 			}catch (Exception $e){
 				echo $e;
 			}
-	}
+	}*/
 
 
 	// Redirection
