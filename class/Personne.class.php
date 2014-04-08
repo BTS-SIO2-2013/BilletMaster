@@ -77,21 +77,29 @@
 
 		public static function affichagePersonne($listeDePersonnes)
 		{	
-			$tab = ("<table border><th></th><th>Nom</th><th>Prenom</th><th>Adresse mail</th><th>Admin</th>");
+			$tab = ("<table border><th></th><th>Nom</th><th>Prenom</th><th>Adresse mail</th><th>Admin</th><th>mdif</th>");
 			foreach($listeDePersonnes as $unePersonne){
 					$tab =$tab.("<tr>");
 					$tab =$tab.("<td><INPUT name = 'idEmploye[]' type='checkbox' value='".$unePersonne->id."'></td>");
 					$tab =$tab.("<td>".$unePersonne->nom."</td>");
 					$tab =$tab.("<td>".$unePersonne->prenom."</td>");
 					$tab =$tab.("<td>".$unePersonne->adresseMail."</td>");
+
+
 					if($unePersonne->admin == '1'){
 						$tab =$tab.("<td><INPUT type='checkbox' checked></td>");	
 					} else {
 						$tab =$tab.("<td><INPUT type='checkbox'></td>");
 					}
+					
+					$tab = $tab.("<td><input type='button' value='charger' id='supprPersonne' /></td>");
 					$tab =$tab.("</tr>");
+
+					
 			}
 			$tab = $tab.("</table>");
+
+				
 
 			return($tab);
 		}

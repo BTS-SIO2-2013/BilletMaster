@@ -133,6 +133,10 @@
 							<input type="submit" value="supprimer" id="supprPersonne" />
 						</div>
 					</form>
+					<form action="includes/cuEmploye.php" method="post" id="formcuEmploye">
+						<div id= "idPersonne">
+						</div>
+					</form>
 					<div id="basCorps">
 						<div id="btnRetour">
 	                        <a href="index.php">Retour</a>
@@ -141,5 +145,8 @@
 	            </div>
 			</div>
 		</div>
+		<script type="text/javascript">
+			$(function
+		</script>
 	</body>
 </html>
