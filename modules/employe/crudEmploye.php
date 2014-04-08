@@ -65,10 +65,6 @@
 	            <div id="titre">
 	                <h1>Liste des employes</h1>
 	            </div>
-	            <div id="profil">
-	                <button type="button">Profil</button>
-	                <button type="button">Deconnexion</button>
-	            </div>
 				<div id="filAriane">
                 </div>
             </div>
@@ -145,5 +141,8 @@
 	            </div>
 			</div>
 		</div>
+		<script type="text/javascript">
+			$(function
+		</script>
 	</body>
 </html>
