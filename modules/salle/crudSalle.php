@@ -19,7 +19,7 @@
 		<div id="corps">
 	        <div id="hautCorps"></div>
 			<div id="milieuCorps">
-				<form action="includes/cuSalle.php" method="post" id="formCU">
+				<form action="cuSalle.php" method="post" id="formCU">
 					<div id="idSalle">
 						<input type="text" name="idSalle" value="" id="idInput" hidden="true"/>
 					</div>
