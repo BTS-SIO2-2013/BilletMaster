@@ -1,16 +1,9 @@
 <?php
+	$title = "Evenements"; //titre de la page
 	require_once '../../class/Evenement.class.php';
 	require_once '../../class/Salle.class.php';
-	//	Pas d'accès direct
-    require_once '../connexion/confirmConnexion.php';
-    include 'header.php';
+    include $_SERVER['DOCUMENT_ROOT'].'/BilletMaster/header.php';
 ?>
-		<title>Gestionnaire des evenements</title>
-		<link rel="stylesheet" type="text/css" href="../../css/global.css" />
-		<link rel="stylesheet" type="text/css" href="../../css/jquery.datetimepicker.css" />
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
-		<script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
-		<script src="../../js/jquery.datetimepicker.js"></script>
 		<!--<script type="text/javascript">
 		$(function(){
 			$("#btnCU").click(function() {
@@ -151,3 +144,4 @@
 
 			});
 		</script>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/BilletMaster/footer.php'; ?>
