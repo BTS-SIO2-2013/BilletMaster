@@ -1,4 +1,6 @@
+
 <?php
+	include '../../header.php';
 	require_once '../../class/Personne.class.php';
 	//	Pas d'accès direct
     require_once '../connexion/confirmConnexion.php';

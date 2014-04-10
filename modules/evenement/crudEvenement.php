@@ -3,6 +3,7 @@
 	require_once '../../class/Salle.class.php';
 	//	Pas d'accès direct
     require_once '../connexion/confirmConnexion.php';
+    include 'header.php';
 ?>
 		<title>Gestionnaire des evenements</title>
 		<link rel="stylesheet" type="text/css" href="../../css/global.css" />
