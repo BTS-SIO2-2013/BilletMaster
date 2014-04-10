@@ -53,8 +53,7 @@ $(document).ready(function(){
   	$('#listeEvenement').change(function() { //récupère la liste en fonction de la liste déroulante
     	var valEvenement = $(this).val(); //récupération de value de l'option
   		if(valEvenement != ''){
-  			$.ajax({
-  				type: "POST",
+  			$.post({
   				url: "infosTickets.php",
   				data: "idEvenement="+valEvenement,
   				success: function(option){
