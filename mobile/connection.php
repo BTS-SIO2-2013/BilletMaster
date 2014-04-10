@@ -27,6 +27,7 @@
     	else
     	{
     		$aut = true;
+    		$message = null;
     	}
   	}
   	echo '"{\"autOk\":\""'.($aut?'true':'false').'"\",""\"message\":\""'.$message.'"\"}"';
