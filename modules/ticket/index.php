@@ -1,8 +1,8 @@
 <?php
 	$title = "Gestionnaire des tickets"; //titre de la page
 	include $_SERVER['DOCUMENT_ROOT'].'/BilletMaster/header.php'; //	Fichier entête
-	include '../../class/Ticket.class.php';
-	include '../../class/Evenement.class.php';
+	include $_SERVER['DOCUMENT_ROOT'].'/BilletMaster/class/Ticket.class.php';
+	include $_SERVER['DOCUMENT_ROOT'].'/BilletMaster/class/Evenement.class.php';
 
 ?>
 <h1>Gestionnaire des tickets</h1>
@@ -13,7 +13,7 @@
 
 <!-- liste des evenements -->
 <div class="listeEvenements">
-	<select id="listeEvenement" name="evenement" onchange="javascript:selectEven();">
+	<select id="listeEvenement" name="evenement">
 		<option value="defaut" >-- Choisissez un événement --</option>
 		<?php 
 			$listeEvenements = Evenement::getListeEvenementsTickets();
@@ -33,32 +33,4 @@
 	</div>
 	
 </div>
-<script>
-$(document).ready(function(){
-	$('.dateTime').datetimepicker({
-		lang:'fr'
-	});
-
-	//masque les formulaires au choix d'un évenement
-	$('#listeEvenement').change(function(event){
-		$('#ajoutTicket').slideUp();
-		$('#modifTicket').slideUp();
-	});
-
-  	$('#listeEvenement').change(function() { //récupère la liste en fonction de la liste déroulante
-    	var valEvenement = $(this).val(); //récupération de value de l'option
-  		if(valEvenement != ''){
-  			$.post({
-  				url: "infosTickets.php",
-  				data: "idEvenement="+valEvenement,
-  				success: function(option){
-  					$('#listeTickets').html(option);
-  				}
-  			});
-  		}
-    });
-
-});
-</script>
-
 <?php include $_SERVER['DOCUMENT_ROOT'].'/BilletMaster/footer.php'; ?>
