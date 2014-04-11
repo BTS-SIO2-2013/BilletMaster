@@ -1,5 +1,6 @@
 <?php include 'header.php'; ?>
 ACCUEIL !!!!!!
+<img src="http://chart.apis.google.com/chart?cht=qr&amp;chs=150x150&amp;chl=www.scoco.fr" alt="qrcode">
 
 
 <a href="modules/employe/crudEmploye.php">Liste Employes</a>

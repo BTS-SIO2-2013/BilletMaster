@@ -20,5 +20,3 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
-<?php include $_SERVER['DOCUMENT_ROOT'].'/BilletMaster/footer.php'; ?>
