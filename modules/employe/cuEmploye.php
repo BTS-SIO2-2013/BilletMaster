@@ -1,7 +1,7 @@
 <?php
 
 	//	Connexion
-	require_once '../../includes/sqlConnect.php';
+	require_once '$_SERVER['DOCUMENT_ROOT']./BilletMaster/includes/sqlConnect.php';
 
     // Recuperation des donnees du formulaire
     $id = $_POST['idPersonne'];
@@ -59,7 +59,7 @@
 	}
 	
 	// Qu'est ce que c'est ca benoit ??
-/*	if ($id != ""){
+	/*if ($id != ""){
 		echo $id;
 		try {
 		$chargePersonne = $bdd -> prepare('SELECT nom, prenom adresseMail, telephone, login, motDePasse, admin from personne, employe WHERE personne.id = employe.idEmploye and id = :id');
@@ -73,6 +73,6 @@
 
 
 	// Redirection
-	header('Location: crudEmploye.php');
+	header('Location: index.php');
 
 ?>

@@ -1,5 +1,5 @@
 <?php 
-	require '../class/Connexion.class.php';
+	require $_SERVER['DOCUMENT_ROOT'].'/BilletMaster/class/Connexion.class.php';
 	
 	$id = $_POST['id']; 
 	$mdp = $_POST['mdp'];

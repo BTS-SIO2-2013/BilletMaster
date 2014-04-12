@@ -2,7 +2,7 @@
 <?php
 
 	//	Connexion
-	require_once '../../includes/sqlConnect.php';
+	require_once $_SERVER['DOCUMENT_ROOT'].'/BilletMaster/includes/sqlConnect.php';
 
 
     // Recuperation des donnees du formulaire

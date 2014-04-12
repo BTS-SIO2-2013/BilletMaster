@@ -1,0 +1,13 @@
+#formCU{
+	overflow: auto;
+	position:relative;
+	height:auto;
+	width:260px;
+}
+
+#formdEmploye{
+	overflow: auto;
+	position:relative;
+	height:auto;
+	width:365px;
+}
