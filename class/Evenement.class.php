@@ -118,7 +118,7 @@
 					$tab =$tab.("<td>".$unEvenement->dateDebutEvenement."</td>");
 					$tab =$tab.("<td>".$unEvenement->dateFinEvenement."</td>");
 					$tab =$tab.("<td>".Salle::getSalleEvenement($unEvenement->id)."</td>");
-					$tab =$tab.("<td><input type='button' name=".$unEvenement->id." data-role='evenementModif' onclick='javascript:modifEvenement();' value='Modifier' /></td>");
+					$tab =$tab.("<td><input type='button' name=".$unEvenement->id." data-role='evenementModif' value='Modifier' /></td>");
 					$tab =$tab.("</tr>");
 			}
 			$tab = $tab.("</table>");
