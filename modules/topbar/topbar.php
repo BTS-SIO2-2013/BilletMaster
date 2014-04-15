@@ -16,6 +16,7 @@
         <li><a href="/BilletMaster/modules/stat/statistique.php">Statistiques</a></li>
         <li><a href="/BilletMaster/modules/evenement/crudEvenement.php">Liste des Evenements</a></li>
         <li><a href="/BilletMaster/modules/ticket/index.php">Gestionnaire des Tickets</a></li>
+        
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

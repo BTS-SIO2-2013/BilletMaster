@@ -4,6 +4,7 @@
 	//	Pas d'accès direct
  ?>
 
+
 <div id="bg">
 	<div id="hautPage">
         <div id="titre">
