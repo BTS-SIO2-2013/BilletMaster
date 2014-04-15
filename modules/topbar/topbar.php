@@ -11,10 +11,10 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="/BilletMaster/modules/employe/index.php">Liste Employes</a></li>
+        <li><a href="/BilletMaster/modules/employe">Liste Employes</a></li>
         <li><a href="/BilletMaster/modules/salle">Liste des Salles</a></li>
         <li><a href="/BilletMaster/modules/stat/statistique.php">Statistiques</a></li>
-        <li><a href="/BilletMaster/modules/evenement/crudEvenement.php">Liste des Evenements</a></li>
+        <li><a href="/BilletMaster/modules/evenement">Liste des Evenements</a></li>
         <li><a href="/BilletMaster/modules/ticket/index.php">Gestionnaire des Tickets</a></li>
         
       </ul>
