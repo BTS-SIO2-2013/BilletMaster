@@ -1,6 +1,7 @@
 $(document).ready(function(){
     //affiche la liste des tickets
-    var evenement = '<?php echo $evenement; ?>' ;
+    var evenement = $('[data-role=evenement]').val() ;
+    alert(evenement);
     if(evenement != ''){
         $.ajax({
             type: "POST",

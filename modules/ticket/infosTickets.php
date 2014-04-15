@@ -52,17 +52,4 @@
 
     <!-- liste des tickets -->
 	<div id="listeTicket"></div>
-		
-
-	<script>
-	$(document).ready(function(){
-
-		$('.dateTime').datetimepicker({
-			lang:'fr',
-			format:'d/m/Y H:i:s'
-		});
-
-		
-
-	});
-	</script>
+	<script type="text/javascript" src="/BilletMaster/js/infosTickets.js"></script>

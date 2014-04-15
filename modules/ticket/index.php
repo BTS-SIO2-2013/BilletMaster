@@ -18,7 +18,7 @@
 		<?php 
 			$listeEvenements = Evenement::getListeEvenementsTickets();
 			foreach($listeEvenements as $unEvenement) {
-				echo '<option name="'.$unEvenement->id.'" id="'.$unEvenement->id.'" value="'.$unEvenement->id.'" >'.$unEvenement->libelle.'</option>';
+				echo '<option name="'.$unEvenement->id.'" id="'.$unEvenement->id.'" value="'.$unEvenement->id.'" data-role="evenement">'.$unEvenement->libelle.'</option>';
 			}
 		?>
 	</select>
