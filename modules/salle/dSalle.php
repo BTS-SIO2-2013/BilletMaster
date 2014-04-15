@@ -33,5 +33,3 @@
 
 	// Redirection
 	header('Location: crudSalle.php');
-
-?>

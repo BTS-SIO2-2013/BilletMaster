@@ -63,7 +63,7 @@
 					</select>
 				</div>
 				<div id="btnCreer">
-					<input type="submit" value="Enregistrer" id="btnCU" />
+					<input type="submit" value="Enregistrer" id="btnCU" class="btn"/>
 				</div>
 			</form>
 			
