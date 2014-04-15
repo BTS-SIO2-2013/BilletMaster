@@ -11,21 +11,12 @@ $(function(){
         
         if(valEvenement != ''){
             $.post("/BilletMaster/modules/ticket/infosTickets.php", "idEvenement="+valEvenement, function(option){
-                    $('#listeTickets').html(option);
+                $('#listeTickets').html(option);
             }).fail(function(){
                 $('#listeTickets').html('Erreur lors de l\'affichage');
             });
         }
-    });
-
-    //affiche le formulaire nouveau ticket au clique du bouton nouveau
-    $('#ticketNew').click(function(event){
-        $("#ajoutTicket").slideDown();
-        $('#modifTicket').slideUp();
-        $('#ticketNew').slideUp();
-    });
-
-        
+    });      
 
 
     //bouton lajouter ticket

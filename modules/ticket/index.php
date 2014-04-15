@@ -13,7 +13,7 @@
 
 <!-- liste des evenements -->
 <div class="listeEvenements">
-	<select id="listeEvenement" name="evenement">
+	<select id="listeEvenement" name="evenement" class="form-control">
 		<option value="defaut" >-- Choisissez un événement --</option>
 		<?php 
 			$listeEvenements = Evenement::getListeEvenementsTickets();
@@ -28,7 +28,7 @@
 <div id="afficheTicket">
 
 	<!-- liste des tickets -->
-	<div id="listeTickets">
+	<div id="listeTickets" class="col-md-12">
 
 	</div>
 	

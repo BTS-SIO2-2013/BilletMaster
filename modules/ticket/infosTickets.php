@@ -1,15 +1,13 @@
 <?php 
-	include '../../class/Evenement.class.php';
-	include '../../class/Ticket.class.php';
+	include $_SERVER['DOCUMENT_ROOT'].'/BilletMaster/class/Evenement.class.php';
+	include $_SERVER['DOCUMENT_ROOT'].'/BilletMaster/class/Ticket.class.php';
 
 	// On récupère l'identifiant de l'événement choisi
 	$valEvenement = isset($_POST['idEvenement']) ? $_POST['idEvenement'] : false;
 	$evenement = $valEvenement;
 ?>
-
-
     <!-- bouton nouveau ticket avec fonction javascript affichage du formulaire -->
-	<input type="button" name="ticketNew" id="ticketNew" value="Nouveau" />
+	<input type="button" name="ticketNew" id="ticketNew" value="Nouveau" class="btn btn-primary"/>
 		
 
     <div id="ajouModifTicket">	
@@ -51,5 +49,5 @@
 	</div>
 
     <!-- liste des tickets -->
-	<div id="listeTicket"></div>
+	<div id="listeTicket" name="listeTicket" data-group="<?php echo $evenement ?>"></div>
 	<script type="text/javascript" src="/BilletMaster/js/infosTickets.js"></script>

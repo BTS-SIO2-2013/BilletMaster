@@ -1,7 +1,7 @@
 <?php
 	$title = "Evenements"; //titre de la page
-	require_once '../../class/Evenement.class.php';
-	require_once '../../class/Salle.class.php';
+	require_once $_SERVER['DOCUMENT_ROOT'].'/BilletMaster/class/Evenement.class.php';
+	require_once $_SERVER['DOCUMENT_ROOT'].'/BilletMaster/class/Salle.class.php';
     include $_SERVER['DOCUMENT_ROOT'].'/BilletMaster/header.php';
 ?>
 		
@@ -75,29 +75,4 @@
 				</div>
 			</div>
 		</div>
-
-		<script type="text/javascript">
-			$(function(){
-				
-				$('.dateTime').datetimepicker({ 
-					format:'d/m/Y H:i',
-					lang:'fr'
-				});
-
-				$('[data-role=evenementModif]').click(function() {
-			    	var valEvenement = $(this).prop('name');
-			  		if(valEvenement != ''){
-			  			$.ajax({
-			  				type: "POST",
-			  				url: "modifEvenement.php",
-			  				data: "idEvenement="+valEvenement,
-			  				success: function(option){
-			  					$('#modifEvenement').html(option);
-			  				}
-			  			});
-			  		}
-				});
-
-			});
-		</script>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/BilletMaster/footer.php'; ?>

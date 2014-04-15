@@ -1,11 +1,10 @@
 $(document).ready(function(){
     //affiche la liste des tickets
-    var evenement = $('[data-role=evenement]').val() ;
-    alert(evenement);
+    var evenement = $('[name=listeTicket]').data("group") ;
     if(evenement != ''){
         $.ajax({
             type: "POST",
-            url: "listeTicket.php",
+            url: "/BilletMaster/modules/ticket/listeTicket.php",
             dataType: "html",
             data: "idEvenement="+evenement,
             success: function(_html){
