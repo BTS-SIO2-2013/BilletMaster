@@ -11,6 +11,6 @@
 		<?php include $_SERVER['DOCUMENT_ROOT']."/BilletMaster/css.php" ?>
 		<title><?php if(empty($title)){ echo 'Administration TicketMaster'; } else{ echo $title.' - Administration TicketMaster'; } ?></title>
 	</head>
-	<body <?php if(!empty($title)){?>id=<?php echo '"'.str_replace(' ', '_', $title).'"';} ?>>
+	<body class="container-fluid" <?php if(!empty($title)){?>id=<?php echo '"'.str_replace(' ', '_', $title).'"';} ?>>
 		<?php include $_SERVER['DOCUMENT_ROOT']."/BilletMaster/modules/topbar/topbar.php" ?>
 		
