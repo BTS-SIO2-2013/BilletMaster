@@ -24,6 +24,6 @@
     }
     
     // Redirection
-    header('Location: ../employe/crudEmploye.php');
+    header('Location: BilletMaster/employe/index.php');
    
 ?>

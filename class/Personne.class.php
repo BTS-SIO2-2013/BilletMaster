@@ -92,7 +92,7 @@
 						$tab =$tab.("<td><INPUT type='checkbox'></td>");
 					}
 					
-					$tab = $tab.("<td><input type='button' value='charger' id='chargerPersonne' /></td>");
+					$tab = $tab.("<td><input type='button' value='charger' name='chargerPersonne' /></td>");
 					$tab =$tab.("</tr>");
 
 					
