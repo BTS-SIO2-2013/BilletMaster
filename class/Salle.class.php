@@ -40,7 +40,7 @@
 
 		public static function getListeSalles()
 		{
-			include '../../includes/sqlConnect.php';
+			include $_SERVER['DOCUMENT_ROOT'].'/BilletMaster/includes/sqlConnect.php';
 
         	try {
 		    	$recuperationSalle = $bdd->prepare('SELECT id, libelle FROM salle Order by libelle ASC');

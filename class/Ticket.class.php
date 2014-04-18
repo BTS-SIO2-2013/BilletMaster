@@ -51,7 +51,7 @@ class Ticket
 	public static function getListeTickets($evenement)
 	{
 		//	Connexion
-	    include '../../includes/sqlConnect.php';
+	    include $_SERVER['DOCUMENT_ROOT'].'/BilletMaster/includes/sqlConnect.php';
         try {
         	
 		    $requete = 'SELECT * 
