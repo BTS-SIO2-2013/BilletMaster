@@ -8,7 +8,7 @@
                 </button>
                 <h4 class="modal-title" id="QRCodeLabel">QR Code</h4>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" data-role="">
             </div>
         </div>
     </div>

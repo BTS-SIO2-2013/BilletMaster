@@ -86,8 +86,6 @@
         </div>
 	</div>
 </div>
-<script type="text/javascript" src="/BilletMaster/js/employe.js">
-</script>
 <?php
 include $_SERVER['DOCUMENT_ROOT'].'/BilletMaster/footer.php';
 ?>

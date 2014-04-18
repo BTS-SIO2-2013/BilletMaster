@@ -39,4 +39,7 @@ $(function(){
 		}
 	return valid;
 	});
+	$('[name=chargerPersonne]').click(function(){
+		alert("click");
+	});
 });
