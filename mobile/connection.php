@@ -1,5 +1,6 @@
 <?php 
 	require $_SERVER['DOCUMENT_ROOT'].'/BilletMaster/class/Connexion.class.php';
+    header('Content-type: application/json');
 	
 	$id = $_POST['id']; 
 	$mdp = $_POST['mdp'];
@@ -30,4 +31,4 @@
     		$message = null;
     	}
   	}
-  	echo '"{\"autOk\":\""'.($aut?'true':'false').'"\",""\"message\":\""'.$message.'"\"}"';
+  	echo '{"autOk":"'.($aut?'true':'false').'","message":"'.$message.'"}';

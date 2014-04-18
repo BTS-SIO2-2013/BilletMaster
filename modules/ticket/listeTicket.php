@@ -82,7 +82,7 @@
 			</tbody>
 		</table>
 	</div>
-	<input type="submit" name="goDelTickets" id="goDelTickets" value="Supprimer" class="btn btn-primary"/> <!-- bouton supprimer pour checkbox -->
+	<input type="submit" name="goDelTickets" id="goDelTickets" value="Supprimer" class="btn btn-danger"/> <!-- bouton supprimer pour checkbox -->
 </form>
 
 

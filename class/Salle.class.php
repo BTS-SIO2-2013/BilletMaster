@@ -40,7 +40,7 @@
 
 		public static function getListeSalles()
 		{
-			include '../../includes/sqlConnect.php';
+			include $_SERVER['DOCUMENT_ROOT'].'/BilletMaster/includes/sqlConnect.php';
 
         	try {
 		    	$recuperationSalle = $bdd->prepare('SELECT id, libelle FROM salle Order by libelle ASC');
@@ -59,7 +59,7 @@
 
 		public static function affichageSalle($listeDeSalles)
 		{	
-			$tab = ("<table border><th></th><th>libelle</th>");
+			$tab = ("<table class='table table-striped'><th></th><th>libelle</th>");
 			foreach($listeDeSalles as $uneSalle){
 					$tab =$tab.("<tr>");
 					$tab =$tab.("<td><INPUT type='checkbox' name='id[]'' value='".$uneSalle->id."'></td>");

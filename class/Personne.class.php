@@ -77,10 +77,10 @@
 
 		public static function affichagePersonne($listeDePersonnes)
 		{	
-			$tab = ("<table border><th></th><th>Nom</th><th>Prenom</th><th>Adresse mail</th><th>Admin</th><th>mdif</th>");
+			$tab = ('<table id="tabPersonne" class="table table-striped" border><th></th><th>Nom</th><th>Prenom</th><th>Adresse mail</th><th>Admin</th><th>mdif</th>');
 			foreach($listeDePersonnes as $unePersonne){
 					$tab =$tab.("<tr>");
-					$tab =$tab.("<td><INPUT name = 'idEmploye[]' type='checkbox' value='".$unePersonne->id."'></td>");
+					$tab =$tab.("<td id='id'><INPUT name = 'idEmploye[]' type='checkbox' value='.$unePersonne->id.'></td>");
 					$tab =$tab.("<td>".$unePersonne->nom."</td>");
 					$tab =$tab.("<td>".$unePersonne->prenom."</td>");
 					$tab =$tab.("<td>".$unePersonne->adresseMail."</td>");

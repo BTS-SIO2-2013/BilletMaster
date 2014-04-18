@@ -51,7 +51,7 @@
 
 		public static function getListeEvenements()
 		{
-			include '../../includes/sqlConnect.php';
+			include $_SERVER['DOCUMENT_ROOT'].'/BilletMaster/includes/sqlConnect.php';
 
         	try {
 		    	$recuperationEvenement = $bdd->prepare('SELECT evt.id, evt.dateDebutVente, evt.dateFinVente, evt.dateDebutEvenement, evt.dateFinEvenement, evt.libelle, evt.idEmploye, evt.idSalle FROM evenement as evt, employe as e, personne as p, salle as s WHERE p.id = e.idEmploye AND e.idEmploye = evt.idEmploye AND s.id = evt.idSalle');
