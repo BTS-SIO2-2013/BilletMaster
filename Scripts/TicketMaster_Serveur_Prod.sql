@@ -15,7 +15,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-
+DROP USER `ticketmaster`;
 CREATE USER 'ticketmaster'@'localhost' 
 IDENTIFIED BY PASSWORD '*356A12F549AFD1559C29222BD180BA4AB355BDEA';
 
@@ -26,6 +26,7 @@ GRANT ALL PRIVILEGES ON `ticketmaster`.* TO 'ticketmaster'@'localhost';
 --
 -- Base de données: `ticketmaster`
 --
+DROP DATABASE `ticketmaster`;
 CREATE DATABASE IF NOT EXISTS `ticketmaster` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `ticketmaster`;
 
