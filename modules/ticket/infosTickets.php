@@ -6,6 +6,9 @@
 	$valEvenement = isset($_POST['idEvenement']) ? $_POST['idEvenement'] : false;
 	$evenement = $valEvenement;
 ?>
+    <!-- liste des tickets -->
+	<div id="listeTicket" name="listeTicket" data-group="<?php echo $evenement ?>"></div>
+
     <!-- bouton nouveau ticket avec fonction javascript affichage du formulaire -->
 	<input type="button" name="ticketNew" id="ticketNew" value="Nouveau" class="btn btn-primary"/>
 		
@@ -47,7 +50,4 @@
 		<!-- formulaire modif d'un ticket -->
 		<div id="modifTicket"></div>
 	</div>
-
-    <!-- liste des tickets -->
-	<div id="listeTicket" name="listeTicket" data-group="<?php echo $evenement ?>"></div>
 	<script type="text/javascript" src="/BilletMaster/js/infosTickets.js"></script>
