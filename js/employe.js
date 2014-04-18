@@ -40,6 +40,7 @@ $(function(){
 	return valid;
 	});
 	$('[name=chargerPersonne]').click(function(){
-		alert("click");
+		var id = "0";
+		alert("ID: " + id);
 	});
 });
