@@ -40,7 +40,7 @@ $(function(){
 	return valid;
 	});
 	$('[name=chargerPersonne]').click(function(){
-		var id = "0";
+		var id = tabPersonne['id'].value;
 		alert("ID: " + id);
 	});
 });
