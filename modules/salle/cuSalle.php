@@ -32,4 +32,4 @@
 	}
 	
 	// Redirection
-	header('Location: crudSalle.php');
+	header('Location: '.$_SERVER['DOCUMENT_ROOT'].'/BilletMaster/salle/');
