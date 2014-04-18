@@ -1,4 +1,5 @@
 <?php 
     include $_SERVER['DOCUMENT_ROOT'].'/BilletMaster/modules/phpqrcode/qrlib.php';
-    QRcode::png('PHP QR Code :)');
+    $num = $_GET['numTicket'];
+    QRcode::png($num);
 ?>

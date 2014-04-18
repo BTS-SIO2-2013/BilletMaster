@@ -3,7 +3,7 @@
 class Ticket
 {
     private $id;
-    private $numero;
+    private $code;
     private $libelle;
     private $etat;
     private $dateValidation;
@@ -19,7 +19,7 @@ class Ticket
                     break;
 				case 7 : //action du constructeur à 7 paramètres
                     $this->id = func_get_arg(0);
-                    $this->numero = func_get_arg(1);
+                    $this->code = func_get_arg(1);
                     $this->libelle = func_get_arg(2);
                     $this->etat = func_get_arg(3);
                     $this->dateValidation = func_get_arg(4);
@@ -62,7 +62,7 @@ class Ticket
 
 	        $listeTickets = array();
         	while ($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) {
-        		$unTicket = new Ticket($ligne['id'], $ligne['numero'], $ligne['libelle'], $ligne['etat'], strtotime($ligne['dateValidation']), $ligne['idUtilisateur'], $ligne['idEvenement']);
+        		$unTicket = new Ticket($ligne['id'], $ligne['code'], $ligne['libelle'], $ligne['etat'], strtotime($ligne['dateValidation']), $ligne['idUtilisateur'], $ligne['idEvenement']);
 				$listeTickets[] = $unTicket; //insertion d unticket dans le tableau
 			}
 			return $listeTickets;
@@ -87,7 +87,7 @@ class Ticket
 	        $resultat = $bdd->query($requete) or die("Erreur avec la requete: $requete");
 
 	        $ligne = $resultat->fetch(PDO::FETCH_ASSOC);
-        	$leTicket = new Ticket($ligne['id'], $ligne['numero'], $ligne['libelle'], $ligne['etat'], strtotime($ligne['dateValidation']), $ligne['idUtilisateur'], $ligne['idEvenement']);
+        	$leTicket = new Ticket($ligne['id'], $ligne['code'], $ligne['libelle'], $ligne['etat'], strtotime($ligne['dateValidation']), $ligne['idUtilisateur'], $ligne['idEvenement']);
 
 			return $leTicket;
         }

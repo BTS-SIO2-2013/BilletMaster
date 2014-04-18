@@ -37,7 +37,7 @@
 									<input type="checkbox" name="idTicket[]" id="idTicket'.$unTicket->id.'" value="'.$unTicket->id.'">
 								</td>
 								<td id="tdnumTicket">
-									'.$unTicket->numero.'
+									'.$unTicket->code.'
 								</td>
 								<td id="tdlibelleticket">
 									'.$unTicket->libelle.'
@@ -52,7 +52,7 @@
 									'.$unTicket->idUtilisateur.'
 								</td>
 								<td id="tdQRCode">
-									<input type="button" class="btn btn-primary" data-role="QRCodeGenerator" data-toggle="modal" data-target="[data-role=QRModal]" value="QR Code"/>
+									<input type="button" name="'.$unTicket->id.'" class="btn btn-primary" data-role="QRCodeGenerator" data-toggle="modal" data-target="#'.$unTicket->code.'" value="QR Code"/>
 								</td>
 								<td id="tdmodifTicket">
 									<input type="button" name="'.$unTicket->id.'" data-role="ticketModif" value="Modifier" class="btn btn-primary"/>
@@ -60,7 +60,23 @@
 								<td id="tddelTicket">
 									<input type="button" name="'.$unTicket->id.'" data-role="ticketDel"  class="delTicket" />
 								</td>
-							</tr>';
+							</tr>
+							<!-- Fenetre pop-up, ou modal voir sur http://getbootstrap.com/javascript/#modals pour la doc -->
+							<div class="modal fade" id="'.$unTicket->code.'" tabindex="-1" role="dialog" aria-labelledby="QRCodeLabel" aria-hidden="true">
+							    <div class="modal-dialog modal-sm">
+							        <div class="modal-content">
+							            <div class="modal-header">
+							                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+							                    &times;
+							                </button>
+							                <h4 class="modal-title" id="QRCodeLabel">QR Code</h4>
+							            </div>
+							            <div class="modal-body" id="QRCodeModalBody">
+							           		<img src="/BilletMaster/modules/ticket/QRCodeTicket.php?numTicket='.$unTicket->code.'" alt="QRCode/>
+							            </div>
+							        </div>
+							    </div>
+							</div>';
 								
 				} ?>
 			</tbody>
@@ -68,8 +84,6 @@
 	</div>
 	<input type="submit" name="goDelTickets" id="goDelTickets" value="Supprimer" class="btn btn-primary"/> <!-- bouton supprimer pour checkbox -->
 </form>
-
-<?php include $_SERVER['DOCUMENT_ROOT'].'/BilletMaster/modules/ticket/modalTicket.php';?>
 
 
 <script type="text/javascript" src="/BilletMaster/js/listeTicket.js"></script>

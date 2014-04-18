@@ -7,6 +7,16 @@ $(document).ready(function(){
         $('#ticketNew').slideUp();
     });
 
+    /*//génère le qrcode pour le ticket selectionné
+    $('[data-role=QRCodeGenerator]').click(function(){
+        var idTicket = $(this).attr('name');
+        $.ajax({
+            type: "POST",
+            url: "QRCodeTicket.php",
+            data: "idTicket="+idTicket
+        });
+    });*/
+
     //affiche le formulaire nouveau ticket au clique du bouton nouveau
     $('[data-role=ticketModif]').click(function(event){
         $("#ajoutTicket").slideUp();

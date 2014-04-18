@@ -33,8 +33,5 @@
 	</div>
 	
 </div>
-<button class="btn btn-primary" data-role="QRCodeGenerator" data-toggle="modal" data-target="[data-role=QRModal]">
-										QR Code
-									</button>
 
 <?php include $_SERVER['DOCUMENT_ROOT'].'/BilletMaster/footer.php'; ?>
