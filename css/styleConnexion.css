@@ -43,7 +43,7 @@ nav a.focus {
 *	FORMULAIRE DE CONNEXION 
 */
 
-form {
+#formConnexion {
 	width: 280px;
 	height: 260px;
 	margin: 150px auto 0 auto;				/* Marge du formulaire de connexion */

@@ -120,16 +120,5 @@
 			</div>
 		</div>
 
-		<script type="text/javascript">
-			$(function(){
-				
-				$('.dateTime').datetimepicker({ 
-					format:'d/m/Y H:i',
-					lang:'fr'
-				});
-
-				
-
-			});
-		</script>
+		
 <?php include $_SERVER['DOCUMENT_ROOT'].'/BilletMaster/footer.php'; ?>

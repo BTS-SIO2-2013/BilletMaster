@@ -15,7 +15,7 @@
 			if (isset($_SESSION['erreur']))
 				echo "<div class='erreurConnexion'><p>".$erreur."</p></div>";
 		?>
-		<form method="POST" action="verifConnexion.php">
+		<form method="POST" action="verifConnexion.php" id="formConnexion">
 			<h2>Connexion</h2>
 			<input type="text" name="txtLogin" class="text-field" placeholder="Identifiant" />
 			<input type="password" name="txtPass" class="text-field" placeholder="Mot de passe" />
